@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Exam Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5),
+                   0 1px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="bg-white/20 backdrop-blur-md text-white p-6 shadow-md border-b border-white/30">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold drop-shadow">Final Exam</h1>
+      <nav>
+        <ul class="flex gap-6 text-lg">
+          <li><a href="/about" class="hover:underline">About</a></li>
+          <li><a href="/myresearch" class="hover:underline">My Research</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center">
+    <section class="bg-white/20 backdrop-blur-lg rounded-2xl shadow-xl p-10 max-w-xl w-full text-center border border-white/30 text-white">
+      <h2 class="text-3xl font-bold mb-4 drop-shadow">Welcome to FinalExam.Your_domain</h2>
+      <p class="text-xl mb-2">Name: <strong class="text-white/90">Tarin Gurin</strong></p>
+      <p class="text-xl mb-4">Student ID: <strong class="text-white/90">67130045</strong></p>
+
+      <a 
+        href="https://github.com/yourusername/finalexam-project"
+        class="inline-block mt-4 bg-white/30 text-white px-6 py-2 rounded-xl hover:bg-white/40 border border-white/40 transition font-semibold"
+        target="_blank"
+      >
+        🔗 GitHub Repository
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-white/80 mb-4">
+    &copy; 2025 Final Exam by Tarin G.
+  </footer>
+
+</body>
+</html>

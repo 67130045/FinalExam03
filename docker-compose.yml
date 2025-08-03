@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "83:80"  # เปลี่ยนจาก 80:80 เป็น 83:80
+    depends_on:
+      - api
+    container_name: finalexam_web
+
+  api:
+    build: ./api
+    restart: always
+    ports:
+      - "3003:3000"  # เปลี่ยนจาก 3000:3000 เป็น 3003:3000
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=student
+      - DB_PASSWORD=studentpass
+      - DB_NAME=finalexam_db
+    container_name: finalexam_api
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_DATABASE: finalexam_db
+      MYSQL_USER: student
+      MYSQL_PASSWORD: studentpass
+    ports:
+      - "3309:3306"  # เปลี่ยนจาก 3306:3306 เป็น 3309:3306
+    volumes:
+      - db_data:/var/lib/mysql
+    container_name: finalexam_db
+
+volumes:
+  db_data:
