@@ -4,7 +4,7 @@ services:
   web:
     build: ./web
     ports:
-      - "83:80"  # เปลี่ยนจาก 80:80 เป็น 83:80
+      - "80:80"  # เปลี่ยนจาก 80:80 เป็น 83:80
     depends_on:
       - api
     container_name: finalexam_web
